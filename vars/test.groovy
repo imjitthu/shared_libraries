@@ -1,5 +1,5 @@
 def call(String action) {
-  if (action == "apply") {
+//   if (action == "apply") {
 
         pipeline {
             agent any 
@@ -15,8 +15,8 @@ def call(String action) {
             }
             }
         }
-    }
-    else {
-        echo action is "${call.action}"
-    }
+    // }
+    // else {
+    //     echo action is "${call.action}"
+    // }
 }
