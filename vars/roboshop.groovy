@@ -1,4 +1,4 @@
-def call (String action) {
+def call(String action) {
 
 pipeline {
 
