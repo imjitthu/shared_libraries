@@ -4,13 +4,13 @@ def call(String action) {
         pipeline {
             agent any 
             environment {
-                action = "${call.action}"
+                envvar = "${call.action}"
             }
 
         stages {
             stage ('Shared Library') {
                 steps {
-                echo "action is ${env.action}"
+                echo "action is ${env.envvar}"
             }
             }
             }
