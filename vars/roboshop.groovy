@@ -1,4 +1,4 @@
-def rs(String action) {
+def webapp(String action) {
 
 pipeline {
 
