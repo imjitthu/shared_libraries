@@ -25,54 +25,60 @@ pipeline {
             }
           }
         }
-        // stage ('Installing Redis') {
-        //   steps {
-        //     if (action == "apply") {
-        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
-        //     }
-        //     if (action == "init") {
-        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform init")]
-        //     }
-        //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform plan")]
-        //     }
-        //     if (action == "destroy") {
-        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
-        //     }
-        //   }
-        //   }
-        // stage ('Installing Mongo') {
-        //   steps {
-        //     if (action == "apply") {
-        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
-        //     }
-        //     if (action == "init") {
-        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform init")]
-        //     }
-        //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform plan")]
-        //     }
-        //     if (action == "destroy") {
-        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
-        //     }
-        //   }
-        // }
-        // stage ('Installing RabbitMQ Server') {
-        //   steps {
-        //     if (action == "apply") {
-        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
-        //     }
-        //     if (action == "init") {
-        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform init")]
-        //     }
-        //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform plan")]
-        //     }
-        //     if (action == "destroy") {
-        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
-        //     }
-        //   }
-        // }
+        stage ('Installing Redis') {
+          steps {
+            script {
+            if (action == "apply") {
+            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
+            }
+            if (action == "init") {
+            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform init")]
+            }
+            if (action == "plan") {
+            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform plan")]
+            }
+            if (action == "destroy") {
+            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            }
+            }
+          }
+          }
+        stage ('Installing Mongo') {
+          steps {
+            script {
+            if (action == "apply") {
+            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
+            }
+            if (action == "init") {
+            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform init")]
+            }
+            if (action == "plan") {
+            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform plan")]
+            }
+            if (action == "destroy") {
+            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            }
+            }
+          }
+        }
+        stage ('Installing RabbitMQ Server') {
+          steps {
+            script {
+            if (action == "apply") {
+            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
+            }
+            if (action == "init") {
+            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform init")]
+            }
+            if (action == "plan") {
+            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform plan")]
+            }
+            if (action == "destroy") {
+            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            }
+            }
+          }
+        }
         }
         }
     }
