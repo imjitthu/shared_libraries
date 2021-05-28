@@ -1,4 +1,4 @@
-def roboshop(String action) {
+def rs(String action) {
 
 pipeline {
 
