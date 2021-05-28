@@ -4,7 +4,7 @@ def call(String action) {
         pipeline {
             agent any 
             environment {
-                action = "${string.action}"
+                action = "${call.action}"
             }
 
         stages {
@@ -15,5 +15,8 @@ def call(String action) {
             }
             }
         }
+    }
+    else {
+        echo action is "${call.action}"
     }
 }
