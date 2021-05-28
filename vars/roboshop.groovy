@@ -27,7 +27,7 @@ pipeline {
             build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -45,7 +45,7 @@ pipeline {
             build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -63,7 +63,7 @@ pipeline {
             build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -81,7 +81,7 @@ pipeline {
             build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -103,7 +103,7 @@ pipeline {
             build job: 'RoboShop_WebApp/catalogue', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/catalogue', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/catalogue', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -121,7 +121,7 @@ pipeline {
             build job: 'RoboShop_WebApp/cart', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/cart', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/cart', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -139,7 +139,7 @@ pipeline {
             build job: 'RoboShop_WebApp/user', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/user', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/user', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -157,7 +157,7 @@ pipeline {
             build job: 'RoboShop_WebApp/payment', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/payment', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/payment', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
@@ -175,7 +175,7 @@ pipeline {
             build job: 'RoboShop_WebApp/shipping', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/shipping', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/shipping', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
             }
@@ -195,7 +195,7 @@ pipeline {
             build job: 'RoboShop_WebApp/frontend', parameters: [string(name: 'tfaction', value: "${env.plan}")]
             }
             if (action == "destroy") {
-            build job: 'RoboShop_WebApp/frontend', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            build job: 'RoboShop_WebApp/frontend', parameters: [string(name: 'tfaction', value: "${env.destroy}")]
             }
             }
           }
