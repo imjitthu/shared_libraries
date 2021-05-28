@@ -1,4 +1,4 @@
-def webapp(String action) {
+def call(String action) {
 
 pipeline {
 
