@@ -1,4 +1,4 @@
-def call(String action) {
+def call(string action) {
 //   if (action == "apply") {
 
         pipeline {
