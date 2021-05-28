@@ -4,7 +4,7 @@ def call(String action) {
         pipeline {
             agent any 
             environment {
-                envvar = "${action}"
+                envvar = "${var.action}"
             }
 
         stages {
