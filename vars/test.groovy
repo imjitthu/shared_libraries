@@ -17,6 +17,6 @@ def call(String action) {
         }
     }
     else {
-        echo action is "${action}"
+        echo "action is ${env.envvar}"
         }
 }
