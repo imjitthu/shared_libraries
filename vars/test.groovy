@@ -4,7 +4,7 @@ def call(string action) {
         pipeline {
             agent any 
             environment {
-                action = "${method.action}"
+                action = "${action}"
             }
 
         stages {
