@@ -8,7 +8,7 @@ def call(String action) {
             }
 
         stages {
-            stage {
+            stage ('Shared Library') {
                 steps {
                 sh 'echo "action is "${env.action}"'
             }
