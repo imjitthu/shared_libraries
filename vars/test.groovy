@@ -1,10 +1,10 @@
-def call(String action) {
-//   if (action == "apply") {
+def acall(String action) {
+    if (action == "apply") {
 
         pipeline {
             agent any 
             environment {
-                envvar = "${call.action}"
+                envvar = "${action}"
             }
 
         stages {
@@ -15,8 +15,8 @@ def call(String action) {
             }
             }
         }
-    // }
-    // else {
-    //     echo action is "${call.action}"
-    // }
+    }
+    else {
+        echo action is "${call.action}"
+        }
 }
