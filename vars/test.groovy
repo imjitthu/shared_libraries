@@ -1,4 +1,4 @@
-def acall(String action) {
+def call(String action) {
     if (action == "apply") {
 
         pipeline {
@@ -17,6 +17,6 @@ def acall(String action) {
         }
     }
     else {
-        echo action is "${call.action}"
+        echo action is "${action}"
         }
 }
