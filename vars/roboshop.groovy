@@ -17,7 +17,7 @@ pipeline {
             build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform init")]
             }
             if (action == "plan") {
-            build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terrafrom plan")]
+            build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform plan")]
             }
             if (action == "destroy") {
             build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
@@ -34,7 +34,7 @@ pipeline {
         //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform init")]
         //     }
         //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terrafrom plan")]
+        //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform plan")]
         //     }
         //     if (action == "destroy") {
         //     build job: 'RoboShop_WebApp/redis', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
@@ -50,7 +50,7 @@ pipeline {
         //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform init")]
         //     }
         //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terrafrom plan")]
+        //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform plan")]
         //     }
         //     if (action == "destroy") {
         //     build job: 'RoboShop_WebApp/mongo', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
@@ -66,7 +66,7 @@ pipeline {
         //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform init")]
         //     }
         //     if (action == "plan") {
-        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terrafrom plan")]
+        //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform plan")]
         //     }
         //     if (action == "destroy") {
         //     build job: 'RoboShop_WebApp/rabbitmq', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
