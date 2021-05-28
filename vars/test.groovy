@@ -9,9 +9,11 @@ def call(String action) {
 
         stages {
             stage {
+                steps {
                 sh 'echo "action is "${env.action}"'
             }
-        }
+            }
+            }
         }
     }
 }
