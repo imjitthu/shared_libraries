@@ -10,7 +10,7 @@ def call(String action) {
         stages {
             stage ('Shared Library') {
                 steps {
-                echo "action is apply"
+                echo "action is ${env.tfaction}"
             }
             }
             }
