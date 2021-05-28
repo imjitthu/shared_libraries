@@ -9,6 +9,7 @@ pipeline {
       parallel {
         stage ('Installing Mysql') {
           steps {
+            script {
             if (action == "apply") {
             build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform apply -auto-approve")]
             }
@@ -20,6 +21,7 @@ pipeline {
             }
             if (action == "destroy") {
             build job: 'RoboShop_WebApp/mysql', parameters: [string(name: 'tfaction', value: "terraform destory -auto-approve")]
+            }
             }
           }
         }
