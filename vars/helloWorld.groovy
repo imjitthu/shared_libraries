@@ -1,3 +1,12 @@
 def call () {
-    sh "echo Hello World!"
+    pipeline {
+        agent any
+        stages {
+            stage ('Hellow World') {
+                steps {
+                    sh "echo Hello World!"                    
+                }
+            }
+        }
+    }
 }
