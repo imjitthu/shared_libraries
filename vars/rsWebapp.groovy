@@ -31,7 +31,7 @@ def call(String action) {
                 steps{
                 script {
                     if (action == "apply") {
-                    sh "mkinv.sh"
+                    sh "sh mkinv.sh"
                     git 'https://github.com/imjitthu/Ansible.git'
                     ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
                     }
