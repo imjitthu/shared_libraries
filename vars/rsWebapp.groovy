@@ -7,7 +7,7 @@ def call(String action) {
                     script {
                     if (action == "plan") {
                     sh "terraform init"
-                    sh "terrafrom plan"
+                    sh "terraform plan"
                     }
                     }  
                     }
