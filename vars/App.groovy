@@ -1,4 +1,5 @@
 def call(String tfaction) {
+    //define a String variable, s must be capital (S) in String.  
     pipeline {
         agent {
             // environment {
