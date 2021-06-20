@@ -15,6 +15,7 @@ def call(String action) {
                     if (action == "apply") {
                     sh "terraform init"
                     sh "terraform apply --auto-approve"
+                    }
                     if (action == "destroy") {
                     sh "terraform init"
                     sh "terraform destroy --auto-approve"
@@ -24,7 +25,6 @@ def call(String action) {
                     sh "terraform validate"
                     }
                     }  
-                    }
                     }
                     }
             stage ('Installing Roboshop WebApp') {
