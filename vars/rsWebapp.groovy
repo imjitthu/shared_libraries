@@ -3,6 +3,7 @@ def call(String action) {
         agent any
             stages {
                 stage ('Share Library is working') {
+                    steps {
                     script {
                     if (action == "plan") {
                     sh "terraform init"
@@ -13,3 +14,4 @@ def call(String action) {
                 }
             }
         }
+    }
