@@ -13,8 +13,8 @@ def call(String action) {
                     sh "terraform init"
                     }
                     if (action == "apply") {
-                    // sh "terraform init"
-                    // sh "terraform apply --auto-approve"
+                    sh "terraform init"
+                    sh "terraform apply --auto-approve"
                     git 'https://github.com/imjitthu/Ansible.git'
                     ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
                     }
