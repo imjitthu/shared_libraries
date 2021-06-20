@@ -16,8 +16,7 @@ def call(String action) {
                     sh "terraform init"
                     sh "terraform apply --auto-approve"
                     git 'https://github.com/imjitthu/Ansible.git'
-                    ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv', playbook: 'roboshop.yml'
-                    sh "cp inv /tmp/inv.test"
+                    ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
                     cleanWs()
                     }
                     if (action == "destroy") {
