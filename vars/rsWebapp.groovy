@@ -31,5 +31,10 @@ def call(String action) {
                     }
                 }
             }
+            post { 
+                always { 
+                    cleanWs()
+                }
+            }
         }
     }
