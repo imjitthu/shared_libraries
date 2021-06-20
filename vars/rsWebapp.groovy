@@ -38,11 +38,11 @@ def call(String action) {
                     }
                     }
                 }
-            post { 
-                always { 
-                    cleanWs()
-                }
             }
-        }
+        post { 
+            always { 
+                cleanWs()
+            }
+        }    
     }
 }
