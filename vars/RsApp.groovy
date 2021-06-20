@@ -5,7 +5,7 @@ def call(String action) {
 
         agent any
 
-            stages {
+            stages ('Robosho App with Terrafor & Ansible') {
                 stage ('Terraform apply') {
                     steps {
                         if (action == 'apply'){
