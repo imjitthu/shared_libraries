@@ -2,7 +2,7 @@ def call(String action) {
     pipeline {
         agent any
             stages {
-                stage ('Share Library is working') {
+                stage ('Creting Infra for Roboshop WebApp') {
                     steps {
                     script {
                     if (action == "plan") {
