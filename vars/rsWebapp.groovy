@@ -29,6 +29,7 @@ def call(String action) {
                     }  
                     }
                 }
+                cleanWs()
             }
         }
     }
