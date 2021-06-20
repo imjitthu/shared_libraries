@@ -7,6 +7,7 @@ def call(String action) {
             stages {
                 stage ('Share Library is working') {
                     if (action == "plan") {
+                        sh "terraform init"
                         sh "terrafrom plan"
                     }
                 }
