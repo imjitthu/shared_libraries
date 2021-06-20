@@ -35,4 +35,3 @@ def call(String action) {
             }
         }
     }
-}
