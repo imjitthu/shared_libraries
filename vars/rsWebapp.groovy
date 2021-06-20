@@ -28,6 +28,7 @@ def call(String action) {
                 }
             stage ('Installing Roboshop WebApp') {
                 steps{
+                script {
                     if (action == "apply") {
                     sh "mkinv.sh"
                     git 'https://github.com/imjitthu/Ansible.git'
@@ -36,7 +37,7 @@ def call(String action) {
                     }
                     }
                 }
-            }
+                }
             post { 
                 always { 
                     cleanWs()
