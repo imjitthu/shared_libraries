@@ -15,9 +15,6 @@ def call(String action) {
                     if (action == "apply") {
                     sh "terraform init"
                     sh "terraform apply --auto-approve"
-                    git 'https://github.com/imjitthu/Ansible.git'
-                    ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
-                    }
                     if (action == "destroy") {
                     sh "terraform init"
                     sh "terraform destroy --auto-approve"
@@ -27,6 +24,15 @@ def call(String action) {
                     sh "terraform validate"
                     }
                     }  
+                    }
+                }
+            stage ('Installing Roboshop WebApp') {
+                steps{
+                    if (action == "apply") {
+                    git 'https://github.com/imjitthu/Ansible.git'
+                    ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
+                    }
+                    }
                     }
                 }
             }
