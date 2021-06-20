@@ -3,28 +3,28 @@ def call(String tfaction) {
     pipeline {
         agent {
             // environment {
-            //     action = "${params.env.tfaction}"
+            //     action = "${params."${tfaction}"}"
             // }
             stages {
                 stage ('Terraform apply') {
-                    when {expression {env.tfaction == 'apply'}}
+                    when {expression { "${tfaction}" == 'apply'}}
                     steps {
                         sh "terraform apply --auto-approve"
                     }
                 stage ('Terraform init') {
-                    when {expression {env.tfaction == 'init'}}
+                    when {expression {"${tfaction}" == 'init'}}
                     steps {
                         sh "Terraform init"
                     }
                     }
                 stage ('Terraform destroy') {
-                    when {expression {env.tfaction == 'destroy'}}
+                    when {expression {"${tfaction}" == 'destroy'}}
                     steps {
                         sh "terraform destroy --auto-approve"
                     }
                     }
                 stage ('Terraform plan') {
-                    when {expression {env.tfaction == 'plan'}}
+                    when {expression {"${tfaction}" == 'plan'}}
                     steps {
                         sh "terraform plan"
                     }
