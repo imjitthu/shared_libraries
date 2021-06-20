@@ -29,6 +29,7 @@ def call(String action) {
             stage ('Installing Roboshop WebApp') {
                 steps{
                     if (action == "apply") {
+                    sh "mkinv.sh"
                     git 'https://github.com/imjitthu/Ansible.git'
                     ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
                     }
