@@ -1,4 +1,4 @@
-def call(string tfaction) {
+def call(String tfaction) {
     pipeline {
         agent {
             // environment {
