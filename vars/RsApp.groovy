@@ -1,7 +1,10 @@
 def call(String action) {
     //define a String variable, s must be capital (S) in String.  
+
     pipeline {
-        agent {
+
+        agent any
+
             stages {
                 stage ('Terraform apply') {
                     steps {
@@ -34,4 +37,3 @@ def call(String action) {
                 }
             }
         }
-    }
