@@ -25,7 +25,8 @@ def call(String action) {
                     }
                     }  
                     }
-                }
+                    }
+                    }
             stage ('Installing Roboshop WebApp') {
                 steps{
                 script {
@@ -37,7 +38,6 @@ def call(String action) {
                     }
                     }
                 }
-                }
             post { 
                 always { 
                     cleanWs()
@@ -45,3 +45,4 @@ def call(String action) {
             }
         }
     }
+}
