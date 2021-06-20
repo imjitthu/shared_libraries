@@ -31,7 +31,7 @@ def call(String action) {
                 steps{
                 script {
                     if (action == "apply") {
-                    sh "cat mksh.in; sh inv.sh"
+                    sh "cat inv.sh; sh inv.sh"
                     git 'https://github.com/imjitthu/Ansible.git'
                     ansiblePlaybook credentialsId: 'DevOps321', installation: 'ansibletool', inventory: 'inv.txt', playbook: 'roboshop.yml'
                     }
