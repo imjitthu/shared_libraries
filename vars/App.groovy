@@ -1,8 +1,8 @@
-def call(string action) {
+def call(string tfaction) {
     pipeline {
         agent {
             environment {
-                action = "${params.action}"
+                action = "${params.tfaction}"
             }
             stages {
                 stage ('Terraform apply') {
