@@ -39,10 +39,10 @@ def call(String action) {
                     }
                 }
             } //stages
-        post { 
-            always { 
-                cleanWs()
-            }
-        }    
+        // post { 
+        //     always { 
+        //         cleanWs()
+        //     }
+        // }    
     } //pipeline
 }
