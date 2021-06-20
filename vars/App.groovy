@@ -2,9 +2,6 @@ def call(String tfaction) {
     //define a String variable, s must be capital (S) in String.  
     pipeline {
         agent {
-            // environment {
-            //     action = "${params."${tfaction}"}"
-            // }
             stages {
                 stage ('Terraform apply') {
                     when {expression { "${tfaction}" == 'apply'}}
